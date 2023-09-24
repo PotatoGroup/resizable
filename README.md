@@ -6,17 +6,49 @@
 ## Install
 
 ```bash
-$ yarn install
+$ yarn install @astii/resizable
 ```
 
-```bash
-$ npm run dev
-$ npm run build
-```
+## Usage
 
+```ts
+import React, { useState } from "react";
+import { Resizable } from "@astii/resizable";
+
+export default () => {
+  const [style, setStyle] = useState<React.CSSProperties>({
+    width: 200,
+    height: 200,
+    backgroundColor: "red",
+  });
+
+  const onResize = ({width, height}) => {
+    setStyle(pre => ({...pre, width, height}))
+  }
+  return (
+    <Resizable onResize={onResize} >
+      <div style={style}></div>
+    </Resizable>
+  );
+};
+
+```
 ## Options
 
-TODO
+```ts
+interface ResizableProps {
+  axis?: "x" | "y" | "both";  //resize direction
+  zoom?: number;   //scaling
+  onResizeStart?: () => void;  //Executed when dragging starts
+  onResize?: (size: {
+    width: CSSProperties["width"];
+    height: CSSProperties["height"];
+  }) => void;  //Executed when dragging
+  onResizeStop?: () => void;  //Executed when dragging ends
+  children: ReactElement<any, string | JSXElementConstructor<any>>;
+  className?: string;
+}
+```
 
 ## LICENSE
 
