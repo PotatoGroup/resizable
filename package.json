@@ -7,7 +7,6 @@
   "types": "dist/esm/index.d.ts",
   "scripts": {
     "dev": "father dev",
-    "build:type": "tsc --emitDeclarationOnly",
     "build": "father build",
     "build:deps": "father prebundle",
     "prepublishOnly": "father doctor && npm run build"
@@ -36,5 +35,8 @@
     "@types/react": "^18.2.22",
     "father": "^4.3.5",
     "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0"
   }
 }

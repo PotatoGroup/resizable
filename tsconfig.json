@@ -1,7 +1,4 @@
 {
-  "types": [
-    "node"
-  ],
   "compilerOptions": {
     "module": "es2020",
     "target": "es6",
@@ -11,7 +8,7 @@
       "dom.iterable",
       "esnext"
     ],
-    "allowJs": true,
+    "allowJs": false,
     "noImplicitAny": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -23,9 +20,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false,
     "jsx": "react",
-    "baseUrl": "./src"
+    "baseUrl": ".",
+    "declaration": true
   },
   "exclude": [
     "./node_modules"
