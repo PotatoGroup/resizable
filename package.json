@@ -19,11 +19,17 @@
   "authors": [
     "1302947749@qq.com"
   ],
-  "license": "MIT",
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:PotatoGroup/resizable.git"
+  },
+  "homepage": "https://github.com/PotatoGroup/resizable#readme",
+  "license": "ISC",
   "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "devDependencies": {
