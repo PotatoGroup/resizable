@@ -1,8 +1,8 @@
 {
   "name": "@astii/resizable",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "a resizable hoc for react",
-  "main": "dist/umd/index.min.js",
+  "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
   "scripts": {

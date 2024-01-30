@@ -1,13 +1,18 @@
-import { defineConfig } from 'father';
+import { defineConfig } from "father";
 
 export default defineConfig({
   esm: {},
   umd: {
     output: {
-      filename: 'index.min.js'
+      filename: "index.js",
     },
     externals: {
-      react: "react"
-    }
+      react: {
+        commonjs: "react",
+        commonjs2: "react",
+        amd: "react",
+        root: "React",
+      },
+    },
   },
 });

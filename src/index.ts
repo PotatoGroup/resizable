@@ -1,2 +1,4 @@
-export { Resizable } from './Resizable'
+import { Resizable } from './Resizable'
 export type { ResizableProps } from './Resizable'
+export { Resizable } from './Resizable'
+export default Resizable

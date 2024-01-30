@@ -8,7 +8,7 @@ import React, {
   Children,
   useCallback,
 } from "react";
-import styles from "./index.less";
+import styles from "./index.module.less";
 
 type OffsetType = [number, number];
 
