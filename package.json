@@ -9,7 +9,8 @@
     "dev": "father dev",
     "build": "father build",
     "build:deps": "father prebundle",
-    "prepublishOnly": "father doctor && npm run build"
+    "prepublishOnly": "father doctor && npm run build",
+    "release": "release-it"
   },
   "keywords": [
     "resizable",
@@ -34,6 +35,7 @@
   "devDependencies": {
     "@types/react": "^18.2.22",
     "father": "^4.3.5",
+    "release-it": "^17.1.1",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
