@@ -49,11 +49,11 @@ const Resizable = ({
       onResize &&
         onResize({
           width: Math.max(
-            Math.floor((width + axis === "y" ? 0 : dx) / zoom),
+            Math.floor((width + (axis === "y" ? 0 : dx)) / zoom),
             0
           ),
           height: Math.max(
-            Math.floor((height + axis === "x" ? 0 : dy) / zoom),
+            Math.floor((height + (axis === "x" ? 0 : dy)) / zoom),
             0
           ),
         });
