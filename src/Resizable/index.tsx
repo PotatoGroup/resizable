@@ -41,16 +41,25 @@ const Resizable = ({
     onResizeStart && onResizeStart();
   };
 
-  const resizeHandler = (offset: OffsetType) => {
-    const { width = 0, height = 0 } = preRect.current ?? {};
-    const dx = offset[0];
-    const dy = offset[1];
-    onResize &&
-      onResize({
-        width: Math.max(Math.floor((width + dx) / zoom), 0),
-        height: Math.max(Math.floor((height + dy) / zoom), 0),
-      });
-  };
+  const resizeHandler = useCallback(
+    (offset: OffsetType) => {
+      const { width = 0, height = 0 } = preRect.current ?? {};
+      const dx = offset[0];
+      const dy = offset[1];
+      onResize &&
+        onResize({
+          width: Math.max(
+            Math.floor((width + axis === "y" ? 0 : dx) / zoom),
+            0
+          ),
+          height: Math.max(
+            Math.floor((height + axis === "x" ? 0 : dy) / zoom),
+            0
+          ),
+        });
+    },
+    [axis]
+  );
 
   const resizeStopHandler = () => {
     onResizeStop && onResizeStop();
